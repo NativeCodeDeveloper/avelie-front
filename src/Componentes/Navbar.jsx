@@ -7,10 +7,10 @@ import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 const navItems = [
-  { label: "Modelo integral", href: "/#porque-elegirnos" },
-  { label: "Atencion coordinada", href: "/#servicios" },
-  { label: "Cobertura", href: "/#casos-clinicos" },
-  { label: "Servicios", href: "/servicios" },
+  { label: "Nosotros", href: "/#porque-elegirnos" },
+  { label: "Servicios", href: "/#servicios" },
+  { label: "Promociones", href: "/#casos-clinicos" },
+  { label: "Precios", href: "/servicios" },
   { label: "Contacto", href: "/contacto" },
 ];
 
@@ -50,28 +50,27 @@ export default function Navbar() {
     };
   }, []);
 
-  const topAlpha = 0.02 + scrollProgress * 0.82;
-  const middleAlpha = 0.01 + scrollProgress * 0.74;
-  const bottomAlpha = scrollProgress * 0.62;
-  const borderAlpha = scrollProgress * 0.24;
-  const shadowAlpha = scrollProgress * 0.2;
-  const blurPx = scrollProgress * 22;
-  const borderWidth = scrollProgress > 0.02 ? 1 : 0;
-  const onTopHero = isHome && scrollProgress < 0.22;
-  const navTextColor = onTopHero ? "rgba(255,255,255,0.93)" : "#0f5a52";
-  const mobileButtonTextColor = onTopHero ? "#ffffff" : "#1a756a";
-  const mobileButtonBg = onTopHero ? "rgba(255,255,255,0.16)" : "#ffffff";
-  const mobileButtonBorder = onTopHero ? "rgba(255,255,255,0.4)" : "#8adfce";
+  const topAlpha = 0.72 + scrollProgress * 0.28;
+  const middleAlpha = 0.68 + scrollProgress * 0.32;
+  const bottomAlpha = 0.62 + scrollProgress * 0.38;
+  const borderAlpha = 0.08 + scrollProgress * 0.18;
+  const shadowAlpha = 0.06 + scrollProgress * 0.14;
+  const blurPx = 14 + scrollProgress * 8;
+  const borderWidth = 1;
+  const navTextColor = "#8b5e4a";
+  const mobileButtonTextColor = "#8b5e4a";
+  const mobileButtonBg = "#ffffff";
+  const mobileButtonBorder = "#e8d5c4";
 
   return (
     <header
       className="fixed inset-x-0 top-0 z-50 transition-[background,box-shadow,border-color,border-width,backdrop-filter] duration-300"
       style={{
-        background: `linear-gradient(180deg, rgba(236,251,247,${topAlpha}) 0%, rgba(224,248,241,${middleAlpha}) 48%, rgba(207,242,233,${bottomAlpha}) 100%)`,
-        borderBottomColor: `rgba(52, 205, 180, ${borderAlpha})`,
+        background: `linear-gradient(180deg, rgba(250,246,242,${topAlpha}) 0%, rgba(245,237,228,${middleAlpha}) 48%, rgba(238,225,212,${bottomAlpha}) 100%)`,
+        borderBottomColor: `rgba(192,132,104,${borderAlpha})`,
         borderBottomStyle: "solid",
         borderBottomWidth: `${borderWidth}px`,
-        boxShadow: `0 12px 30px -24px rgba(15,90,82,${shadowAlpha})`,
+        boxShadow: `0 12px 30px -24px rgba(92,52,34,${shadowAlpha})`,
         backdropFilter: `blur(${blurPx}px) saturate(110%)`,
       }}
     >
@@ -79,8 +78,8 @@ export default function Navbar() {
         <Link href="/#inicio" aria-label="Ir al inicio" className="group flex shrink-0 items-center gap-3 sm:gap-4">
           <div className="relative shrink-0">
             <Image
-              src="/logo_transparent.png"
-              alt="Logo SaludB"
+              src="/logoavelie.png"
+              alt="Logo Avelie"
               width={84}
               height={84}
               priority
@@ -108,10 +107,10 @@ export default function Navbar() {
         <div className="flex shrink-0 items-center gap-2 sm:gap-3">
           <Link
             href="/agendaProfesionales"
-            aria-label="Agendar evaluacion"
-            className="hidden rounded-full border border-[#34cdb4] bg-[#34cdb4] px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-white transition duration-300 ease-out hover:bg-[#2ab9a2] sm:inline-flex sm:px-5 sm:py-2.5 sm:text-xs"
+            aria-label="Agendar hora"
+            className="hidden rounded-full border border-[#c08468] bg-[#c08468] px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-white transition duration-300 ease-out hover:bg-[#a06848] sm:inline-flex sm:px-5 sm:py-2.5 sm:text-xs"
           >
-            Agendar evaluacion
+            Agendar hora
           </Link>
 
           <button
@@ -133,7 +132,7 @@ export default function Navbar() {
 
       <div
         className={[
-          "overflow-hidden border-t border-[#bfeee3] bg-[#f3fffc] backdrop-blur-xl lg:hidden",
+          "overflow-hidden border-t border-[#e8d5c4] bg-[#faf6f2] backdrop-blur-xl lg:hidden",
           isOpen ? "max-h-[420px] opacity-100" : "max-h-0 opacity-0",
           "transition-all duration-300 ease-out",
         ].join(" ")}
@@ -144,7 +143,7 @@ export default function Navbar() {
               key={item.label}
               href={item.href}
               onClick={() => setIsOpen(false)}
-              className="rounded-lg border border-transparent px-4 py-3 text-[11px] font-medium uppercase tracking-[0.16em] text-[#1a756a] transition duration-300 hover:border-[#bfeee3] hover:bg-[#ecfbf7] sm:text-xs"
+              className="rounded-lg border border-transparent px-4 py-3 text-[11px] font-medium uppercase tracking-[0.16em] text-[#5c3422] transition duration-300 hover:border-[#e8d5c4] hover:bg-[#f5ede4] sm:text-xs"
             >
               {item.label}
             </Link>
@@ -152,10 +151,10 @@ export default function Navbar() {
           <Link
             href="/agendaProfesionales"
             onClick={() => setIsOpen(false)}
-            aria-label="Agendar evaluacion desde menu movil"
-            className="mt-2 rounded-lg border border-[#34cdb4] bg-[#34cdb4] px-4 py-3 text-center text-[11px] font-semibold uppercase tracking-[0.16em] text-white transition duration-300 hover:bg-[#2ab9a2] sm:text-xs"
+            aria-label="Agendar hora desde menu movil"
+            className="mt-2 rounded-lg border border-[#c08468] bg-[#c08468] px-4 py-3 text-center text-[11px] font-semibold uppercase tracking-[0.16em] text-white transition duration-300 hover:bg-[#a06848] sm:text-xs"
           >
-            Agendar evaluacion
+            Agendar hora
           </Link>
         </div>
       </div>

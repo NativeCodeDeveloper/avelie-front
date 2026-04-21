@@ -379,25 +379,25 @@ export default function CalendarioMensualHoras() {
 
     /* ---------- UI ---------- */
     return (
-        <div className="min-h-screen bg-gradient-to-b from-slate-100 via-slate-50 to-slate-100 px-4 py-10 sm:px-6 lg:px-8">
+        <div className="min-h-screen bg-[#faf6f2] px-4 py-10 sm:px-6 lg:px-8">
             <div className="mx-auto w-full max-w-3xl">
                 <header className="mb-6 flex flex-col items-center gap-2 text-center">
                     <div
-                        className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600">
+                        className="inline-flex items-center gap-2 rounded-full border border-[#e8d5c4] bg-[#faf0e8] px-3 py-1 text-xs font-medium text-[#c08468]">
                         Agenda · Online
                     </div>
 
                     <h1
                         className={`text-3xl sm:text-4xl font-black tracking-widest `}
                     >
-                        <span className="bg-gradient-to-r from-slate-900 via-gray-800 to-slate-700 text-transparent bg-clip-text ">{nombreProfesional || "Cargando..."}</span>
+                        <span className="bg-gradient-to-r from-[#5c3422] via-[#8b5e4a] to-[#5c3422] text-transparent bg-clip-text ">{nombreProfesional || "Cargando..."}</span>
                         <span
-                            className="relative mt-1 block h-1 w-40 max-w-full rounded-full bg-gradient-to-r from-slate-400 via-slate-200 to-transparent"
+                            className="relative mt-1 block h-1 w-40 max-w-full rounded-full bg-gradient-to-r from-[#c08468] via-[#e8d5c4] to-transparent"
                         />
                     </h1>
 
-                    <p className="max-w-md text-sm leading-6 text-slate-500">
-                        Reserva tu hora odontológica en segundos. Selecciona fecha y un bloque horario disponible.
+                    <p className="max-w-md text-sm leading-6 text-[#8b5e4a]">
+                        Reserva tu sesion en linea. Selecciona fecha y un bloque horario disponible.
                     </p>
                 </header>
 
@@ -540,7 +540,7 @@ export default function CalendarioMensualHoras() {
 
                                         return (
                                             <div key={entry.start}
-                                                 className={"flex items-center justify-between rounded-xl border p-3 shadow-sm hover:shadow-md hover:shadow-slate-900/5 transition " + (selected ? "bg-green-50 border-green-300" : "bg-white/90 border-slate-200")}>
+                                                 className={"flex items-center justify-between rounded-xl border p-3 shadow-sm hover:shadow-md transition " + (selected ? "bg-[#faf0e8] border-[#c08468]" : "bg-white border-[#e8d5c4]")}>
                                                 <div>
                                                     <div className="text-sm font-medium text-slate-800">Atención</div>
                                                     <div className="text-xs text-slate-500">{entry.start} – {entry.end}</div>
@@ -548,7 +548,7 @@ export default function CalendarioMensualHoras() {
                                                 <div className="flex items-center gap-3">
                                                     <button
                                                         onClick={() => seleccionarInicio(entry.start)}
-                                                        className={"px-3 py-1 rounded-lg font-semibold shadow-sm transition active:scale-[0.98] " + (selected ? 'bg-green-600 text-white shadow-md' : 'bg-gray-900 text-white hover:bg-gray-800 hover:shadow-md hover:shadow-slate-900/5')}
+                                                        className={"px-3 py-1 rounded-lg font-semibold shadow-sm transition active:scale-[0.98] " + (selected ? 'bg-[#c08468] text-white shadow-md' : 'bg-[#5c3422] text-white hover:bg-[#3d2014]')}
                                                     >
                                                         {selected ? 'Seleccionada' : 'Seleccionar'}
                                                     </button>
@@ -598,12 +598,12 @@ export default function CalendarioMensualHoras() {
 
                 </div>
 
-                <footer className="mt-10 text-center text-xs text-slate-600">
+                <footer className="mt-10 text-center text-xs text-[#8b5e4a]">
                     <p>
-                        Odontología clínica integral con atención personalizada para cada paciente.
+                        Avelie Centro Estetico, Las Condes. Tratamientos con tecnologia avanzada.
                     </p>
-                    <p className="mt-2 text-[11px] text-slate-400">
-                        Horarios: Lun-Sáb 9:00-22:00 | Dom Cerrado
+                    <p className="mt-2 text-[11px] text-[#a07060]">
+                        Horarios: Lun-Sab 9:00-22:00 | Dom Cerrado
                     </p>
                 </footer>
             </div>
