@@ -50,12 +50,12 @@ export default function Navbar() {
     };
   }, []);
 
-  const topAlpha = 0.72 + scrollProgress * 0.28;
-  const middleAlpha = 0.68 + scrollProgress * 0.32;
-  const bottomAlpha = 0.62 + scrollProgress * 0.38;
-  const borderAlpha = 0.08 + scrollProgress * 0.18;
-  const shadowAlpha = 0.06 + scrollProgress * 0.14;
-  const blurPx = 14 + scrollProgress * 8;
+  const topAlpha = 0.92 + scrollProgress * 0.08;
+  const middleAlpha = 0.88 + scrollProgress * 0.12;
+  const bottomAlpha = 0.84 + scrollProgress * 0.16;
+  const borderAlpha = 0.12 + scrollProgress * 0.14;
+  const shadowAlpha = 0.08 + scrollProgress * 0.12;
+  const blurPx = 16 + scrollProgress * 6;
   const borderWidth = 1;
   const navTextColor = "#8b5e4a";
   const mobileButtonTextColor = "#8b5e4a";
@@ -78,7 +78,7 @@ export default function Navbar() {
         <Link href="/#inicio" aria-label="Ir al inicio" className="group flex shrink-0 items-center gap-3 sm:gap-4">
           <div className="relative shrink-0">
             <Image
-              src="/logoavelie.png"
+              src="/avalielogo1.png"
               alt="Logo Avelie"
               width={84}
               height={84}
@@ -108,7 +108,7 @@ export default function Navbar() {
           <Link
             href="/agendaProfesionales"
             aria-label="Agendar hora"
-            className="hidden rounded-full border border-[#c08468] bg-[#c08468] px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-white transition duration-300 ease-out hover:bg-[#a06848] sm:inline-flex sm:px-5 sm:py-2.5 sm:text-xs"
+            className="hidden rounded-full border border-[#cb8e68] bg-[#cb8e68] px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-white transition duration-300 ease-out hover:bg-[#b07450] sm:inline-flex sm:px-5 sm:py-2.5 sm:text-xs"
           >
             Agendar hora
           </Link>
@@ -152,7 +152,7 @@ export default function Navbar() {
             href="/agendaProfesionales"
             onClick={() => setIsOpen(false)}
             aria-label="Agendar hora desde menu movil"
-            className="mt-2 rounded-lg border border-[#c08468] bg-[#c08468] px-4 py-3 text-center text-[11px] font-semibold uppercase tracking-[0.16em] text-white transition duration-300 hover:bg-[#a06848] sm:text-xs"
+            className="mt-2 rounded-lg border border-[#cb8e68] bg-[#cb8e68] px-4 py-3 text-center text-[11px] font-semibold uppercase tracking-[0.16em] text-white transition duration-300 hover:bg-[#b07450] sm:text-xs"
           >
             Agendar hora
           </Link>

@@ -39,7 +39,7 @@ export default function ContactoPage() {
         <div className="relative mx-auto grid w-full max-w-7xl gap-8 px-5 md:px-8 lg:grid-cols-2 lg:gap-10 xl:px-10">
 
           {/* Panel izquierdo — información */}
-          <aside className="rounded-3xl bg-[#5c3422] p-7 shadow-[0_20px_54px_-34px_rgba(92,52,34,0.3)] md:p-9">
+          <aside className="rounded-3xl bg-[#c58364] p-7 shadow-[0_20px_54px_-34px_rgba(92,52,34,0.3)] md:p-9">
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/70">
               Contacto
             </p>
@@ -114,7 +114,7 @@ export default function ContactoPage() {
 
           {/* Panel derecho — canales de contacto */}
           <div className="rounded-3xl border border-[#e8d5c4] bg-white p-7 shadow-sm md:p-9">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#c08468]">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#cb8e68]">
               Canales de contacto
             </p>
             <h2 className="mt-4 text-3xl font-semibold leading-tight text-[#5c3422] sm:text-4xl">
@@ -130,13 +130,13 @@ export default function ContactoPage() {
                 href="https://wa.me/56900000000"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-full bg-[#c08468] px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-[#a06848]"
+                className="inline-flex items-center justify-center rounded-full bg-[#cb8e68] px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-[#b07450]"
               >
                 Escribir por WhatsApp
               </a>
               <a
                 href="mailto:contacto@avelie.cl"
-                className="inline-flex items-center justify-center rounded-full border border-[#c08468] px-7 py-3.5 text-sm font-semibold text-[#5c3422] transition hover:bg-[#faf0e8]"
+                className="inline-flex items-center justify-center rounded-full border border-[#cb8e68] px-7 py-3.5 text-sm font-semibold text-[#5c3422] transition hover:bg-[#faf0e8]"
               >
                 Enviar correo
               </a>
