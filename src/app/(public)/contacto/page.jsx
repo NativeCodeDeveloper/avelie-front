@@ -12,20 +12,20 @@ const contactCards = [
   },
   {
     title: "WhatsApp",
-    value: "+56 9 0000 0000",
-    href: "https://wa.me/56900000000",
+    value: "+56 9 4679 1144",
+    href: "https://wa.me/56946791144",
     icon: MessageCircle,
   },
   {
     title: "Email",
-    value: "contacto@avelie.cl",
-    href: "mailto:contacto@avelie.cl",
+    value: "Esteticaavelie@gmail.com",
+    href: "mailto:Esteticaavelie@gmail.com",
     icon: Mail,
   },
   {
     title: "Instagram",
-    value: "@avelie.cl",
-    href: "https://www.instagram.com/avelie.cl",
+    value: "@Avelieclinic",
+    href: "https://www.instagram.com/Avelieclinic",
     icon: Instagram,
   },
 ];
@@ -105,8 +105,13 @@ export default function ContactoPage() {
               <div className="mt-3 flex items-start gap-3 text-sm text-white/88">
                 <Clock3 className="mt-0.5 h-4 w-4 text-white/70 shrink-0" />
                 <div className="space-y-1.5">
-                  <p>Lunes a Viernes: 09:00 a 20:00</p>
-                  <p>Sabado: 09:00 a 14:00</p>
+                  <p>Lunes: 10:00 – 15:00</p>
+                  <p>Martes: 14:00 – 18:00</p>
+                  <p>Miercoles: 10:00 – 15:00</p>
+                  <p>Jueves: 14:00 – 18:00</p>
+                  <p>Viernes: 10:00 – 15:00</p>
+                  <p>Sabado: 10:00 – 15:00</p>
+                  <p>Domingo: Cerrado</p>
                 </div>
               </div>
             </div>
@@ -127,7 +132,7 @@ export default function ContactoPage() {
 
             <div className="mt-8 grid gap-3">
               <a
-                href="https://wa.me/56900000000"
+                href="https://wa.me/56946791144"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center rounded-full bg-[#cb8e68] px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-[#b07450]"
@@ -135,13 +140,13 @@ export default function ContactoPage() {
                 Escribir por WhatsApp
               </a>
               <a
-                href="mailto:contacto@avelie.cl"
+                href="mailto:Esteticaavelie@gmail.com"
                 className="inline-flex items-center justify-center rounded-full border border-[#cb8e68] px-7 py-3.5 text-sm font-semibold text-[#5c3422] transition hover:bg-[#faf0e8]"
               >
                 Enviar correo
               </a>
               <a
-                href="https://www.instagram.com/avelie.cl"
+                href="https://www.instagram.com/Avelieclinic"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center rounded-full border border-[#e8d5c4] px-7 py-3.5 text-sm font-semibold text-[#5c3422] transition hover:bg-[#faf0e8]"

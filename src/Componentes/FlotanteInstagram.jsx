@@ -59,7 +59,7 @@ export default function FloatingActionButtonExtendedSize() {
 
       {/* Texto y enlace */}
       <Link
-        href="https://www.instagram.com/runajoyas.cl?igsh=OTY2a3lka3lramtr"
+        href="https://www.instagram.com/Avelieclinic"
         target="_blank"
         rel="noopener noreferrer"
         underline="none"
@@ -86,7 +86,7 @@ export default function FloatingActionButtonExtendedSize() {
           component="span"
           sx={{ fontSize: { xs: 12, md: 14 } }}
         >
-          {' '}😊 @RunaJoyas
+          {' '}@Avelieclinic
         </Typography>
       </Link>
 

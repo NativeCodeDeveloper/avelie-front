@@ -72,20 +72,22 @@ export default function MinimalHeroSection({
       }
       .avelie-minimal-shell {
         display: grid;
-        gap: clamp(1.75rem, 5vw, 3rem);
-        grid-template-columns: minmax(0, 1.04fr) minmax(320px, 0.96fr);
+        gap: clamp(1.75rem, 4vw, 3rem);
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
         align-items: center;
       }
       .avelie-minimal-copy {
         display: flex;
         flex-direction: column;
-        gap: clamp(1.4rem, 3vw, 2rem);
+        gap: clamp(1.2rem, 2.5vw, 2rem);
         align-items: flex-start;
+        min-width: 0;
       }
       .avelie-minimal-lede {
         display: flex;
         flex-direction: column;
-        gap: clamp(0.9rem, 2vw, 1.3rem);
+        gap: clamp(0.8rem, 1.8vw, 1.3rem);
+        width: 100%;
       }
       .avelie-minimal-cta {
         display: flex;
@@ -96,8 +98,9 @@ export default function MinimalHeroSection({
       .avelie-minimal-image {
         position: relative;
         overflow: hidden;
-        border-radius: clamp(1.6rem, 3vw, 2.5rem);
-        min-height: clamp(21rem, 42vw, 34rem);
+        border-radius: clamp(1.4rem, 2.5vw, 2.5rem);
+        min-height: clamp(20rem, 40vw, 34rem);
+        width: 100%;
       }
       .avelie-minimal-image::after {
         content: "";
@@ -121,7 +124,7 @@ export default function MinimalHeroSection({
         letter-spacing: 0.28em;
         text-transform: uppercase;
       }
-      @media (max-width: 920px) {
+      @media (max-width: 768px) {
         .avelie-minimal-shell {
           grid-template-columns: 1fr;
         }
@@ -131,25 +134,26 @@ export default function MinimalHeroSection({
         }
         .avelie-minimal-cta {
           justify-content: center;
+          width: 100%;
         }
         .avelie-minimal-image {
           order: -1;
-          width: min(100%, 34rem);
+          width: 100%;
           justify-self: center;
-          min-height: clamp(18rem, 68vw, 28rem);
+          min-height: clamp(16rem, 60vw, 26rem);
         }
         .avelie-minimal-footnote {
           justify-content: center;
           text-align: center;
         }
       }
-      @media (max-width: 640px) {
+      @media (max-width: 480px) {
         .avelie-minimal-cta {
-          width: 100%;
           flex-direction: column;
         }
         .avelie-minimal-cta > * {
           width: 100%;
+          text-align: center;
         }
       }
     `;
@@ -208,10 +212,10 @@ export default function MinimalHeroSection({
               </div>
 
               <div className="avelie-minimal-lede">
-                <h2 className="max-w-xl !text-[clamp(2.2rem,4.4vw,4.2rem)] font-light !leading-[1.02] tracking-[-0.02em] text-[#5f3c2f]">
+                <h2 className="w-full text-[clamp(1.8rem,3.6vw,3.6rem)]! leading-[1.08]! font-light tracking-[-0.02em] text-[#5f3c2f]">
                   {title}
                 </h2>
-                <p className="max-w-xl !text-[clamp(0.98rem,1.35vw,1.12rem)] !leading-[1.78] text-[#8b6658]">
+                <p className="w-full text-[clamp(0.92rem,1.2vw,1.08rem)]! leading-[1.78]! text-[#8b6658]">
                   {description}
                 </p>
               </div>

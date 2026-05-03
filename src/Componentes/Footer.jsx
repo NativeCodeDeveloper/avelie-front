@@ -18,9 +18,9 @@ const serviceList = [
 ];
 
 const socialLinks = [
-  { label: "Instagram", href: "https://www.instagram.com/avelie.cl", Icon: Instagram },
+  { label: "Instagram", href: "https://www.instagram.com/Avelieclinic", Icon: Instagram },
   { label: "Sitio web", href: "https://www.avelie.cl", Icon: Globe },
-  { label: "WhatsApp", href: "https://wa.me/56900000000", Icon: MessageCircle },
+  { label: "WhatsApp", href: "https://wa.me/56946791144", Icon: MessageCircle },
 ];
 
 export default function Footer() {
@@ -90,20 +90,20 @@ export default function Footer() {
             <ul className="mt-5 space-y-3">
               <li>
                 <a
-                  href="tel:+56900000000"
+                  href="tel:+56946791144"
                   className="inline-flex items-center gap-2.5 text-sm text-white/70 transition hover:text-white"
                 >
                   <Phone className="h-3.5 w-3.5 shrink-0 text-[#c9a870]" />
-                  +56 9 0000 0000
+                  +56 9 4679 1144
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:contacto@avelie.cl"
+                  href="mailto:Esteticaavelie@gmail.com"
                   className="inline-flex items-center gap-2.5 text-sm text-white/70 transition hover:text-white"
                 >
                   <Mail className="h-3.5 w-3.5 shrink-0 text-[#c9a870]" />
-                  contacto@avelie.cl
+                  Esteticaavelie@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-2.5 text-sm text-white/70">
@@ -116,8 +116,9 @@ export default function Footer() {
               <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-white/50">
                 Horarios
               </p>
-              <p className="mt-2 text-sm text-white/70">Lunes a Viernes: 09:00 – 20:00</p>
-              <p className="text-sm text-white/70">Sabados: 09:00 – 14:00</p>
+              <p className="mt-2 text-sm text-white/70">Lun / Mie / Vie / Sab: 10:00 – 15:00</p>
+              <p className="text-sm text-white/70">Mar / Jue: 14:00 – 18:00</p>
+              <p className="text-sm text-white/70">Domingo: Cerrado</p>
             </div>
 
             <div className="mt-6 flex items-center gap-2">

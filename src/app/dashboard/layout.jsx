@@ -1,8 +1,11 @@
 // app/dashboard/layout.jsx
+import { Michroma } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import Link from "next/link";
 import MobileNav from "./MobileNav";
 import SignOutBtn from "./SignOutBtn";
+
+const michroma = Michroma({ weight: "400", subsets: ["latin"], display: "swap" });
 
 export const metadata = {
     title: "Dashboard",
@@ -17,17 +20,22 @@ export default function DashboardLayout({ children }) {
                 {/* Sidebar */}
                 <aside className="hidden md:flex h-screen w-[230px] shrink-0 flex-col bg-gray-900 text-white border-r border-white/[0.04] selection:bg-violet-500/30 font-[family-name:var(--font-inter)]">
 
-                    {/* ── Brand ── */}
-                    <div className="relative px-5 py-4 shrink-0">
-                        <div className="relative flex items-center gap-2.5">
-                            <div className="flex h-7 w-7 items-center justify-center rounded-md bg-gradient-to-br from-violet-500 to-fuchsia-600 shadow-lg shadow-violet-500/20">
-                                <span className="text-[10px] font-black text-white leading-none tracking-tight">AC</span>
+                   {/* ── Brand ── */}
+                    <div className="relative px-4 pb-3 pt-4 shrink-0">
+                        <div className="relative flex justify-center">
+                            <div className="absolute inset-0 flex items-center justify-center">
+                                <div className="h-20 w-20 rounded-full bg-violet-500/[0.06] blur-2xl" />
                             </div>
-                            <div className="leading-none">
-                                <div className="text-[13px] font-medium tracking-[-0.01em] text-white/90">AgendaClinica</div>
-                                <div className="mt-[3px] text-[10px] font-light text-white/30">Panel admin</div>
-                            </div>
+                            <img
+                                src="/logo.png"
+                                alt="AgendaClinica"
+                                className="relative h-32 w-full object-contain object-center drop-shadow-[0_0_12px_rgba(139,92,246,0.15)]"
+                            />
                         </div>
+                        <div className={`${michroma.className} -mt-1 text-center`}>
+                            <p className="text-[11.5px] leading-tight text-white/90 tracking-[0.08em]">AgendaClinica</p>
+                        </div>
+                        <div className="mt-3 h-px bg-black/10" />
                     </div>
 
                     {/* ── Navigation ── */}
