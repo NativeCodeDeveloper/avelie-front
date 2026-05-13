@@ -111,7 +111,7 @@ const [id_profesional, setId_profesional] = useState("");
         })
 
             if (!res.ok) {
-                return toast.error("No se ha podido insertar bloqueo al sistema. Intente mas tarde.")
+                return toast.error("Verifique que no haya una hora o bloqueo previo.")
             }else{
 
                 const respuestaBackend = await res.json();
@@ -124,14 +124,18 @@ const [id_profesional, setId_profesional] = useState("");
                     setHoraFinalizacion("");
                     await verTodosLosBloqueos();
                     return toast.success('Se ha ingresado con exito el bloqueo al sistema. ')
+                }else if (respuestaBackend.message === "reservaExistente") {
+                    return toast.error("No puede bloquear un horario donde ya existen pacientes agendados.");
+                }else if (respuestaBackend.message === "bloqueoExistente") {
+                    return toast.error("Verifique que no haya una hora o bloqueo previo.");
                 }else {
-                    return toast.error("No se ha podido insertar bloqueo al sistema. Intente mas tarde.")
+                    return toast.error("Verifique que no haya una hora o bloqueo previo.")
                 }
 
             }
 
         }catch (error) {
-            return toast.error("No se ha podido insertar el bloqueo de horario. Contacte a soporte TI de nativecode ")
+            return toast.error("Verifique que no haya una hora o bloqueo previo.")
         }
     }
 
@@ -181,7 +185,7 @@ const [id_profesional, setId_profesional] = useState("");
                     await verTodosLosBloqueos();
                     return toast.success('Se ha eliminado con exito el bloqueo del sistema. ')
                 }else {
-                    return toast.error("No se ha podido insertar bloqueo al sistema. Intente mas tarde.")
+                    return toast.error("Verifique que no haya una hora o bloqueo previo.")
                 }
             }
         }catch (error) {
