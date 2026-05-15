@@ -600,7 +600,7 @@ export default function CalendarioMensualHoras() {
 
                 <footer className="mt-10 text-center text-xs text-[#8b5e4a]">
                     <p>
-                        Avelie Centro Estetico, Las Condes. Tratamientos con tecnologia avanzada.
+                        Avelie Centro Estetico, Providencia. Tratamientos con tecnologia avanzada.
                     </p>
                     <p className="mt-2 text-[11px] text-[#a07060]">
                         Horarios: Lun-Sab 9:00-22:00 | Dom Cerrado

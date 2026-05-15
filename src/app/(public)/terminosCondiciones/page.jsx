@@ -3,7 +3,7 @@ const sections = [
     title: "1. Identificacion del prestador",
     body: [
       "SaludB presta servicios de salud integral a domicilio en la Region Metropolitana de Chile.",
-      "Canales oficiales de contacto: Contacto@saludb.cl, WhatsApp +56 9 8527 8325, Instagram @saludb.cl y sitio web www.saludb.cl.",
+      "Canales oficiales de contacto: Esteticaavelie@gmail.com, WhatsApp +56 9 7728 3979, Instagram @Avelieclinic y sitio web www.avelie.cl.",
     ],
   },
   {

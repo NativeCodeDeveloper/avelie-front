@@ -113,7 +113,7 @@ export default function Seccion3() {
                 Agenda tu primera sesion y comienza a ver resultados reales.
               </h2>
               <p className="mx-auto mt-5 max-w-xl text-sm leading-7 text-white/80">
-                Te orientamos con un plan personalizado segun tus objetivos, en un entorno sofisticado y cercano ubicado en Las Condes.
+                Te orientamos con un plan personalizado segun tus objetivos, en un entorno sofisticado y cercano ubicado en Providencia.
               </p>
               <Link
                 href="/agendaProfesionales"

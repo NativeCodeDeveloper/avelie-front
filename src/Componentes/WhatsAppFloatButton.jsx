@@ -3,7 +3,7 @@ import { MessageCircle } from "lucide-react";
 export default function WhatsAppFloatButton() {
   return (
     <a
-      href="https://wa.me/56985278325"
+      href="https://wa.me/56977283979"
       target="_blank"
       rel="noreferrer"
       aria-label="Abrir WhatsApp de SaludB"

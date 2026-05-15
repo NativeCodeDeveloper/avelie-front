@@ -237,23 +237,6 @@ export default function MinimalHeroSection({
                 </Link>
               </div>
 
-              {features.length > 0 && (
-                <div className="grid w-full gap-3 sm:grid-cols-3">
-                  {features.map(({ title: featureTitle, description: featureDescription }) => (
-                    <div
-                      key={featureTitle}
-                      className="rounded-[22px] border border-[#efe1d7] bg-[#fffaf7]/90 p-4 text-left shadow-[0_14px_40px_-34px_rgba(92,52,34,0.35)]"
-                    >
-                      <h3 className="text-sm font-semibold tracking-[0.04em] text-[#5f3c2f]">
-                        {featureTitle}
-                      </h3>
-                      <p className="mt-2 text-sm leading-6 text-[#8b6658]">
-                        {featureDescription}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              )}
             </div>
 
             <figure className="avelie-minimal-image border border-white/60 bg-[#f5e9df] shadow-[0_24px_60px_-40px_rgba(92,52,34,0.5)]">
@@ -270,6 +253,27 @@ export default function MinimalHeroSection({
               </div>
             </figure>
           </div>
+
+          {features.length > 0 && (
+            <>
+              <div className="my-8 h-px w-full bg-gradient-to-r from-transparent via-[#dcc5b0] to-transparent" />
+              <div className="grid gap-4 sm:grid-cols-3">
+                {features.map(({ title: featureTitle, description: featureDescription }) => (
+                  <div
+                    key={featureTitle}
+                    className="rounded-[22px] border border-[#efe1d7] bg-[#fffaf7]/90 p-5 shadow-[0_14px_40px_-34px_rgba(92,52,34,0.35)]"
+                  >
+                    <h3 className="text-sm font-semibold tracking-[0.04em] text-[#5f3c2f]">
+                      {featureTitle}
+                    </h3>
+                    <p className="mt-2 text-sm leading-6 text-[#8b6658]">
+                      {featureDescription}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
         </div>
 
         <div className="avelie-minimal-footnote mt-8 px-1 text-[#9c7a6b]">

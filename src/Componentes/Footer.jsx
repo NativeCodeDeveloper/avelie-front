@@ -20,7 +20,7 @@ const serviceList = [
 const socialLinks = [
   { label: "Instagram", href: "https://www.instagram.com/Avelieclinic", Icon: Instagram },
   { label: "Sitio web", href: "https://www.avelie.cl", Icon: Globe },
-  { label: "WhatsApp", href: "https://wa.me/56946791144", Icon: MessageCircle },
+  { label: "WhatsApp", href: "https://wa.me/56977283979", Icon: MessageCircle },
 ];
 
 export default function Footer() {
@@ -38,18 +38,18 @@ export default function Footer() {
               alt="Logo Avelie"
               className="h-[100px] w-[100px] rounded-full bg-[#f5ede4] object-contain p-1"
             />
-            <p className="mt-5 text-[11px] font-semibold uppercase tracking-[0.26em] text-[#c9a870]">
+            <p className="mt-5 text-[11px] font-semibold uppercase tracking-[0.26em] text-white">
               Centro Estetico
             </p>
-            <p className="mt-3 max-w-xs text-sm leading-[1.72] text-white/70">
+            <p className="mt-3 max-w-xs text-sm leading-[1.72] text-white/85">
               Depilacion laser y tratamientos corporales con tecnologia avanzada
-              en Las Condes, Santiago.
+              en Providencia, Santiago.
             </p>
           </div>
 
           {/* Columna 2 — Navegación */}
           <div>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.26em] text-[#c9a870]">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.26em] text-white">
               Navegacion
             </p>
             <nav aria-label="Links del pie de pagina" className="mt-5">
@@ -58,7 +58,7 @@ export default function Footer() {
                   <li key={item.label}>
                     <Link
                       href={item.href}
-                      className="text-sm text-white/70 transition hover:text-white"
+                      className="text-sm text-white/90 transition hover:text-white"
                     >
                       {item.label}
                     </Link>
@@ -70,12 +70,12 @@ export default function Footer() {
 
           {/* Columna 3 — Servicios */}
           <div>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.26em] text-[#c9a870]">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.26em] text-white">
               Servicios
             </p>
             <ul className="mt-5 space-y-3">
               {serviceList.map((item) => (
-                <li key={item} className="text-sm text-white/70">
+                <li key={item} className="text-sm text-white/85">
                   {item}
                 </li>
               ))}
@@ -84,40 +84,40 @@ export default function Footer() {
 
           {/* Columna 4 — Contacto */}
           <div>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.26em] text-[#c9a870]">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.26em] text-white">
               Contacto
             </p>
             <ul className="mt-5 space-y-3">
               <li>
                 <a
-                  href="tel:+56946791144"
-                  className="inline-flex items-center gap-2.5 text-sm text-white/70 transition hover:text-white"
+                  href="tel:+56977283979"
+                  className="inline-flex items-center gap-2.5 text-sm text-white/90 transition hover:text-white"
                 >
-                  <Phone className="h-3.5 w-3.5 shrink-0 text-[#c9a870]" />
-                  +56 9 4679 1144
+                  <Phone className="h-3.5 w-3.5 shrink-0 text-white" />
+                  +56 9 7728 3979
                 </a>
               </li>
               <li>
                 <a
                   href="mailto:Esteticaavelie@gmail.com"
-                  className="inline-flex items-center gap-2.5 text-sm text-white/70 transition hover:text-white"
+                  className="inline-flex items-center gap-2.5 text-sm text-white/90 transition hover:text-white"
                 >
-                  <Mail className="h-3.5 w-3.5 shrink-0 text-[#c9a870]" />
+                  <Mail className="h-3.5 w-3.5 shrink-0 text-white" />
                   Esteticaavelie@gmail.com
                 </a>
               </li>
-              <li className="flex items-center gap-2.5 text-sm text-white/70">
-                <MapPin className="h-3.5 w-3.5 shrink-0 text-[#c9a870]" />
-                Las Condes, Santiago
+              <li className="flex items-start gap-2.5 text-sm text-white/90">
+                <MapPin className="mt-0.5 h-3.5 w-3.5 shrink-0 text-white" />
+                Manuel Montt 252, Providencia · Oficina 203
               </li>
             </ul>
 
             <div className="mt-6">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-white/50">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-white/90">
                 Horarios
               </p>
-              <p className="mt-2 text-sm text-white/70">Lun / Mie / Vie / Sab: 10:00 – 15:00</p>
-              <p className="text-sm text-white/70">Mar / Jue: 14:00 – 18:00</p>
+              <p className="mt-2 text-sm text-white/80">Lun / Mie / Vie / Sab: 10:00 – 15:00</p>
+              <p className="text-sm text-white/80">Mar / Jue: 14:00 – 18:00</p>
               <p className="text-sm text-white/70">Domingo: Cerrado</p>
             </div>
 
@@ -129,7 +129,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white/60 transition hover:border-[#c9a870] hover:text-[#c9a870]"
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-white/80 transition hover:border-[#c9a870] hover:text-white"
                 >
                   <Icon className="h-4 w-4" />
                 </a>
@@ -141,14 +141,14 @@ export default function Footer() {
       </div>
 
       {/* Barra inferior */}
-      <div className="border-t border-white/10">
-        <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-3 px-5 py-5 text-[11px] text-white/40 md:flex-row md:px-8 lg:px-10">
+      <div className="border-t border-white/8">
+        <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-3 px-5 py-5 text-[11px] text-white/70 md:flex-row md:px-8 lg:px-10">
           <p>© {new Date().getFullYear()} Avelie Centro Estetico. Todos los derechos reservados.</p>
           <a
             href="https://nativecode.cl"
             target="_blank"
             rel="noopener noreferrer"
-            className="transition hover:text-white/70"
+            className="transition hover:text-white/80"
           >
             Desarrollado por nativecode.cl
           </a>

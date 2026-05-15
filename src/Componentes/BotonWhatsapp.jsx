@@ -21,7 +21,7 @@ const fabGreenStyle = {
 
 export default function BotonWhatsapp() {
   const handleClick = () => {
-    window.open('https://wa.me/+56985937487', '_blank');
+    window.open('https://wa.me/+56977283979', '_blank');
   };
 
   return (

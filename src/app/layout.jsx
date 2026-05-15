@@ -26,21 +26,21 @@ export const metadataBase = new URL(process.env.NEXT_PUBLIC_SITE_URL || "https:/
 
 export const metadata = {
   title: {
-    default: "Avelie | Centro Estetico Las Condes",
+    default: "Avelie | Centro Estetico Providencia",
     template: "%s | Avelie",
   },
   description:
-    "Avelie es un centro estetico en Las Condes especializado en depilacion laser, lipo laser, mesoterapia y tratamientos de belleza con tecnologia avanzada y atencion personalizada.",
+    "Avelie es un centro estetico en Providencia especializado en depilacion laser, lipo laser, mesoterapia y tratamientos de belleza con tecnologia avanzada y atencion personalizada.",
   keywords: [
     "Avelie",
-    "centro estetico Las Condes",
+    "centro estetico Providencia",
     "depilacion laser Santiago",
     "lipo laser",
     "mesoterapia corporal",
     "tratamientos esteticos",
     "depilacion definitiva",
     "tecnologia trilaser",
-    "belleza Las Condes",
+    "belleza Providencia",
     "estetica femenina",
   ],
   authors: [{ name: "Avelie", url: metadataBase.href }],
@@ -61,7 +61,7 @@ export const metadata = {
     apple: "/avalielogo1.png",
   },
   openGraph: {
-    title: "Avelie | Centro Estetico Las Condes",
+    title: "Avelie | Centro Estetico Providencia",
     description:
       "Espacio dedicado a realzar tu belleza con resultados visibles, tecnologia avanzada y una experiencia cercana, elegante y personalizada.",
     url: metadataBase.href,
@@ -72,8 +72,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Avelie | Centro Estetico Las Condes",
-    description: "Depilacion laser, lipo laser y tratamientos esteticos con tecnologia avanzada en Las Condes.",
+    title: "Avelie | Centro Estetico Providencia",
+    description: "Depilacion laser, lipo laser y tratamientos esteticos con tecnologia avanzada en Providencia.",
   },
 };
 
