@@ -62,7 +62,7 @@ export default function FormularioReservaProfesional() {
             const res = await fetch(`${API}/tarifasProfesional/seleccionarTarifasPorProfesional`, {
                 method: 'POST',
                 headers: {Accept: 'application/json',
-                'Content-Type': 'application/json',},
+                    'Content-Type': 'application/json',},
                 mode: 'cors',
                 body: JSON.stringify({profesional_id}),
             })
@@ -97,98 +97,98 @@ export default function FormularioReservaProfesional() {
 
 
 
- /*
-     async function pagarMercadoPago(
-        nombrePaciente,
-        apellidoPaciente,
-        rut,
-        telefono,
-        email,
-        fechaInicio,
-        horaInicio,
-        fechaFinalizacion,
-        horaFin,
-        totalPago,
-        profesionalSeleccionado,
-        servicioSeleccionado,
-        id_profesional
-    ) {
-        try {
-            if (!nombrePaciente || !apellidoPaciente || !rut || !telefono || !email || !fechaInicio || !horaInicio || !fechaFinalizacion || !horaFin || !id_profesional) {
-                return toast.error("Debe completar toda la informacion para realizar la reserva")
-            }
+    /*
+        async function pagarMercadoPago(
+           nombrePaciente,
+           apellidoPaciente,
+           rut,
+           telefono,
+           email,
+           fechaInicio,
+           horaInicio,
+           fechaFinalizacion,
+           horaFin,
+           totalPago,
+           profesionalSeleccionado,
+           servicioSeleccionado,
+           id_profesional
+       ) {
+           try {
+               if (!nombrePaciente || !apellidoPaciente || !rut || !telefono || !email || !fechaInicio || !horaInicio || !fechaFinalizacion || !horaFin || !id_profesional) {
+                   return toast.error("Debe completar toda la informacion para realizar la reserva")
+               }
 
-            if (totalPago <= 0) {
-                return toast.error("Debe completar toda la informacion para realizar la reserva")
-            }
+               if (totalPago <= 0) {
+                   return toast.error("Debe completar toda la informacion para realizar la reserva")
+               }
 
-            let horaFinalizacion = horaFin;
+               let horaFinalizacion = horaFin;
 
-            const res = await fetch(`${API}/pagosMercadoPago/create-order`, {
-                method: "POST",
-                headers: {
-                    Accept: "application/json",
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    tituloProducto: `Reserva Consulta: ${servicioSeleccionado} con ${profesionalSeleccionado}`,
-                    precio: Number(totalPago),
-                    cantidad: 1,
-                    nombrePaciente,
-                    apellidoPaciente,
-                    rut,
-                    telefono,
-                    email,
-                    fechaInicio,
-                    horaInicio,
-                    fechaFinalizacion,
-                    horaFinalizacion,
-                    estadoReserva : 'reservada',
-                    totalPago,
-                    id_profesional
-                }),
-                mode: "cors",
-            });
+               const res = await fetch(`${API}/pagosMercadoPago/create-order`, {
+                   method: "POST",
+                   headers: {
+                       Accept: "application/json",
+                       "Content-Type": "application/json"
+                   },
+                   body: JSON.stringify({
+                       tituloProducto: `Reserva Consulta: ${servicioSeleccionado} con ${profesionalSeleccionado}`,
+                       precio: Number(totalPago),
+                       cantidad: 1,
+                       nombrePaciente,
+                       apellidoPaciente,
+                       rut,
+                       telefono,
+                       email,
+                       fechaInicio,
+                       horaInicio,
+                       fechaFinalizacion,
+                       horaFinalizacion,
+                       estadoReserva : 'reservada',
+                       totalPago,
+                       id_profesional
+                   }),
+                   mode: "cors",
+               });
 
-            if (!res.ok) {
-                return toast.error("No se puede procesar el pago por favor evalue otro medio de pago contactandonos por WhatsApp")
-            }
+               if (!res.ok) {
+                   return toast.error("No se puede procesar el pago por favor evalue otro medio de pago contactandonos por WhatsApp")
+               }
 
-            const data = await res.json();
-            console.log("Respuesta create-order:", data);
+               const data = await res.json();
+               console.log("Respuesta create-order:", data);
 
-            if (data) {
+               if (data) {
 
-                //data.sandbox_init_point || PARA PRUEBAS LOCALES ||data?.init_point;
-                const checkoutUrl = data?.init_point;
-                console.log("checkoutUrl:", checkoutUrl);
+                   //data.sandbox_init_point || PARA PRUEBAS LOCALES ||data?.init_point;
+                   const checkoutUrl = data?.init_point;
+                   console.log("checkoutUrl:", checkoutUrl);
 
-                if (checkoutUrl) {
-                    console.log(checkoutUrl);
-                    window.location.href = checkoutUrl;
+                   if (checkoutUrl) {
+                       console.log(checkoutUrl);
+                       window.location.href = checkoutUrl;
 
-                } else {
-                    return toast.error("No se puede procesar el pago. Problema a nivel del Link de init poiunt")
-                }
-            } else {
-                return toast.error("No se puede procesar el pago. Intenet mas tarde.")
+                   } else {
+                       return toast.error("No se puede procesar el pago. Problema a nivel del Link de init poiunt")
+                   }
+               } else {
+                   return toast.error("No se puede procesar el pago. Intenet mas tarde.")
 
-            }
-        } catch (err) {
-            console.error(err);
-            return toast.error("No se puede procesar el pago por favor evalue otro medio de pago contactandonos por WhatsApp")
+               }
+           } catch (err) {
+               console.error(err);
+               return toast.error("No se puede procesar el pago por favor evalue otro medio de pago contactandonos por WhatsApp")
 
-        }
-    }
+           }
+       }
 
- * */
-
-
+    * */
 
 
 
 
-        id_profesional
+
+
+    id_profesional
 
     function comprobanteAgendamiento() {
         setNombrePaciente("");
@@ -280,7 +280,7 @@ export default function FormularioReservaProfesional() {
                         {profesionalSeleccionado || "Cargando..."}
                     </h1>
                     <p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-slate-500">
-                        {descripcionProfesional}
+                        Psicóloga clínica, Agenda tu consulta de forma rápida y segura.
                     </p>
                     <div className="mx-auto mt-4 h-px w-20 bg-gradient-to-r from-transparent via-amber-400/50 to-transparent"></div>
                 </header>
@@ -416,7 +416,7 @@ export default function FormularioReservaProfesional() {
                     {/* Acciones */}
                     <div className="flex flex-col-reverse gap-3 border-t border-slate-100 pt-6 sm:flex-row sm:justify-end">
 
-                            <ShadcnButton2 nombre={"RETROCEDER"} funcion={()=>volver(id_profesional)}/>
+                        <ShadcnButton2 nombre={"RETROCEDER"} funcion={()=>volver(id_profesional)}/>
 
                         <ShadcnButton2
                             nombre={"FINALIZAR"}
