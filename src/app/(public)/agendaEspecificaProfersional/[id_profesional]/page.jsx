@@ -70,21 +70,24 @@ export default function CalendarioMensualHoras() {
     };
 
     // Genera los bloques de atención (60 min) según el día de la semana
-    // Lunes a Sábado: 09:00 - 22:00
-    // Domingo: No disponible
-    // Los inicios van separados por 70 minutos (60 atención + 10 descanso), pero los descansos no se muestran.
+    // Lun/Mie/Vie/Sáb: 10:00 - 15:00
+    // Mar/Jue: 14:00 - 18:00
+    // Domingo: Cerrado
     const attentionSlots = useMemo(() => {
         if (!fechaSeleccionada) return [];
 
         const dayOfWeek = fechaSeleccionada.getDay(); // 0=domingo, 6=sábado
 
-        // Domingo no tiene horarios
+        // Domingo cerrado
         if (dayOfWeek === 0) return [];
 
+        // Lun(1), Mie(3), Vie(5), Sáb(6): 10:00-15:00
+        // Mar(2), Jue(4): 14:00-18:00
+        const isLMVS = [1, 3, 5, 6].includes(dayOfWeek);
+        const startMinutes = isLMVS ? 10 * 60 : 14 * 60;
+        const endMinutes  = isLMVS ? 15 * 60 : 18 * 60;
+
         const slots = [];
-        const startMinutes = 9 * 60; // 09:00
-        // Lunes a Sábado hasta 22:00
-        const endMinutes = 22 * 60;
         let cursor = startMinutes;
 
         const minutesToHHMM = (min) => {
@@ -97,8 +100,7 @@ export default function CalendarioMensualHoras() {
             const attStart = cursor;
             const attEnd = cursor + 60;
             slots.push({start: minutesToHHMM(attStart), end: minutesToHHMM(attEnd)});
-            // avanzar 60 + 10 minutos (=70) para el siguiente inicio
-            cursor = attEnd + 10;
+            cursor = attEnd; // bloques exactos de 60 min
         }
 
         return slots;
@@ -132,7 +134,7 @@ export default function CalendarioMensualHoras() {
         // Validar que no sea domingo
         const dayOfWeek = fecha.getDay();
         if (dayOfWeek === 0) {
-            toast.error("Las atenciones son de Lunes a Sábado.\nLun-Sáb: 9:00-22:00", {
+            toast.error("Domingo cerrado.\nLun/Mié/Vie/Sáb: 10:00–15:00 · Mar/Jue: 14:00–18:00", {
                 duration: 4000,
                 style: {
                     background: '#FEE2E2',
@@ -491,7 +493,9 @@ export default function CalendarioMensualHoras() {
                         <div className="mt-5">
                             <div className="flex items-center justify-between">
                                 <h3 className="text-sm font-semibold text-slate-800">
-                                    Agenda (09:00–22:00)
+                                    {[1,3,5,6].includes(fechaSeleccionada?.getDay())
+                                        ? "Horario 10:00 – 15:00"
+                                        : "Horario 14:00 – 18:00"}
                                 </h3>
                                 <div className="flex items-center gap-3">
                                     <p className="text-xs text-slate-500">Bloques de 60 min</p>
@@ -603,7 +607,7 @@ export default function CalendarioMensualHoras() {
                         Avelie Centro Estetico, Providencia. Tratamientos con tecnologia avanzada.
                     </p>
                     <p className="mt-2 text-[11px] text-[#a07060]">
-                        Horarios: Lun-Sab 9:00-22:00 | Dom Cerrado
+                        Lun / Mié / Vie / Sáb: 10:00–15:00 &nbsp;·&nbsp; Mar / Jue: 14:00–18:00 &nbsp;·&nbsp; Dom: Cerrado
                     </p>
                 </footer>
             </div>

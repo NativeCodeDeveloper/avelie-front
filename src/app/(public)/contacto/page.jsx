@@ -12,8 +12,8 @@ const contactCards = [
   },
   {
     title: "WhatsApp",
-    value: "+56 9 7728 3979",
-    href: "https://wa.me/56977283979",
+    value: "+56 9 4679 1144",
+    href: "https://wa.me/56946791144",
     icon: MessageCircle,
   },
   {
@@ -35,7 +35,7 @@ const channels = [
     icon: MessageCircle,
     label: "WhatsApp",
     description: "Respuesta rapida · Coordinacion de sesiones",
-    href: "https://wa.me/56977283979",
+    href: "https://wa.me/56946791144",
     cta: "Escribir ahora",
     primary: true,
   },

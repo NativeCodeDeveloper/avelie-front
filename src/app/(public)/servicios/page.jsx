@@ -292,7 +292,7 @@ export default function PreciosPage() {
               Reservar hora
             </Link>
             <a
-              href="https://wa.me/56977283979"
+              href="https://wa.me/56946791144"
               target="_blank"
               rel="noreferrer"
               className="rounded-full border border-[#cb8e68] px-7 py-3 text-sm font-medium text-[#5c3422] transition hover:bg-[#faf0e8]"

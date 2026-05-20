@@ -20,7 +20,7 @@ const serviceList = [
 const socialLinks = [
   { label: "Instagram", href: "https://www.instagram.com/Avelieclinic", Icon: Instagram },
   { label: "Sitio web", href: "https://www.avelie.cl", Icon: Globe },
-  { label: "WhatsApp", href: "https://wa.me/56977283979", Icon: MessageCircle },
+  { label: "WhatsApp", href: "https://wa.me/56946791144", Icon: MessageCircle },
 ];
 
 export default function Footer() {
@@ -90,11 +90,11 @@ export default function Footer() {
             <ul className="mt-5 space-y-3">
               <li>
                 <a
-                  href="tel:+56977283979"
+                  href="tel:+56946791144"
                   className="inline-flex items-center gap-2.5 text-sm text-white/90 transition hover:text-white"
                 >
                   <Phone className="h-3.5 w-3.5 shrink-0 text-white" />
-                  +56 9 7728 3979
+                  +56 9 4679 1144
                 </a>
               </li>
               <li>

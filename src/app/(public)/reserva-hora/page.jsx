@@ -140,7 +140,7 @@ function ReservaHoraContent() {
                 ¡Tu cita ha sido confirmada!
               </p>
               <p className="mt-3 text-sm text-[#8b5e4a] leading-relaxed">
-                Recuerda asistir puntualmente. Si necesitas cancelar o reagendar, comunícate con nosotros con al menos 24 horas de anticipación al <span className="font-semibold">+56 9 7728 3979</span> o a <span className="font-semibold">Esteticaavelie@gmail.com</span>.
+                Recuerda asistir puntualmente. Si necesitas cancelar o reagendar, comunícate con nosotros con al menos 24 horas de anticipación al <span className="font-semibold">+56 9 4679 1144</span> o a <span className="font-semibold">Esteticaavelie@gmail.com</span>.
               </p>
             </div>
 

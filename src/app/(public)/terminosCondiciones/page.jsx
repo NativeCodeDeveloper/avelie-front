@@ -2,37 +2,37 @@ const sections = [
   {
     title: "1. Identificacion del prestador",
     body: [
-      "SaludB presta servicios de salud integral a domicilio en la Region Metropolitana de Chile.",
-      "Canales oficiales de contacto: Esteticaavelie@gmail.com, WhatsApp +56 9 7728 3979, Instagram @Avelieclinic y sitio web www.avelie.cl.",
+      "Avelie Centro Estetico presta servicios de estetica y tratamientos corporales en Providencia, Santiago.",
+      "Canales oficiales de contacto: Esteticaavelie@gmail.com, WhatsApp +56 9 4679 1144, Instagram @Avelieclinic y sitio web www.avelie.cl.",
     ],
   },
   {
     title: "2. Alcance de los servicios",
     body: [
-      "Nuestros servicios incluyen kinesiologia, terapia ocupacional, fonoaudiologia, medicina general, geriatria, enfermeria, TENS, cuidadores, podologia y arriendo de productos de salud.",
-      "Cada plan de atencion se adapta al estado clinico, funcional y contexto familiar de cada paciente.",
+      "Nuestros servicios incluyen depilacion laser trilaser, lipo laser 6 en 1, mesoterapia corporal, tratamientos faciales y corporales combinados.",
+      "Cada tratamiento se adapta a las necesidades, tipo de piel y objetivos esteticos de cada cliente.",
     ],
   },
   {
     title: "3. Reserva, cambios y asistencia",
     body: [
-      "Las reservas y coordinaciones se gestionan por canales oficiales y segun disponibilidad profesional.",
-      "Para reagendar o cancelar una visita solicitamos aviso con al menos 24 horas de anticipacion.",
-      "La continuidad del servicio depende de la correcta coordinacion entre paciente, familia y equipo tratante.",
+      "Las reservas se gestionan a traves del sitio web, WhatsApp o canales oficiales, segun disponibilidad de la agenda.",
+      "Para reagendar o cancelar una sesion solicitamos aviso con al menos 24 horas de anticipacion.",
+      "La inasistencia sin aviso previo podra significar la perdida del turno reservado.",
     ],
   },
   {
-    title: "4. Modelo de atencion coordinada",
+    title: "4. Resultados y recomendaciones",
     body: [
-      "SaludB trabaja con enfoque interdisciplinario, integrando distintas areas clinicas dentro de un plan comun.",
-      "El objetivo es evitar intervenciones aisladas y asegurar coherencia en el proceso terapeutico.",
+      "Avelie utiliza tecnologia de ultima generacion para ofrecer tratamientos seguros y efectivos.",
+      "Los resultados pueden variar segun las condiciones individuales, constancia en el tratamiento y cuidados posteriores de cada cliente.",
     ],
   },
   {
-    title: "5. Evaluacion y plan personalizado",
+    title: "5. Evaluacion previa",
     body: [
-      "Antes de iniciar prestaciones, se realiza una evaluacion para definir pertinencia clinica, objetivos y frecuencia de intervencion.",
-      "Los resultados pueden variar segun condiciones individuales, adherencia y contexto del paciente.",
+      "Antes de iniciar ciertos tratamientos, se realiza una evaluacion para determinar la pertinencia y el protocolo adecuado.",
+      "Avelie se reserva el derecho de no realizar un servicio si considera que puede representar un riesgo para el cliente.",
     ],
   },
   {
@@ -45,22 +45,22 @@ const sections = [
   {
     title: "7. Privacidad y datos personales",
     body: [
-      "Los datos de pacientes y familias se utilizan exclusivamente para coordinacion asistencial, seguimiento clinico y cumplimiento legal.",
-      "SaludB adopta medidas razonables de confidencialidad y resguardo conforme a la normativa vigente.",
-      "Puedes solicitar actualizacion o eliminacion de datos en Contacto@saludb.cl.",
+      "Los datos de clientes se utilizan exclusivamente para coordinacion de servicios, seguimiento de tratamientos y cumplimiento legal.",
+      "Avelie adopta medidas razonables de confidencialidad y resguardo conforme a la normativa vigente.",
+      "Puedes solicitar actualizacion o eliminacion de datos en Esteticaavelie@gmail.com.",
     ],
   },
   {
     title: "8. Propiedad intelectual",
     body: [
-      "Los contenidos del sitio, incluyendo textos, imagenes e identidad visual, son de uso exclusivo de SaludB o sus titulares.",
+      "Los contenidos del sitio, incluyendo textos, imagenes e identidad visual, son de uso exclusivo de Avelie o sus titulares.",
       "No esta permitido copiar, reproducir o distribuir contenido sin autorizacion previa y por escrito.",
     ],
   },
   {
     title: "9. Modificaciones y vigencia",
     body: [
-      "SaludB puede actualizar estos terminos para reflejar cambios operativos, legales o de servicio.",
+      "Avelie puede actualizar estos terminos para reflejar cambios operativos, legales o de servicio.",
       "La version publicada en esta pagina es la vigente y reemplaza versiones anteriores.",
     ],
   },
@@ -81,13 +81,13 @@ export default function TerminosYCondiciones() {
 
         <div className="relative mx-auto w-full max-w-5xl px-6 md:px-10 xl:px-12">
           <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#f1d8cb]/74">
-            SaludB
+            Avelie
           </p>
           <h1 className="mt-4 text-4xl leading-tight text-[#fff1e8] sm:text-5xl">
             Terminos y Condiciones
           </h1>
           <p className="mt-6 max-w-3xl text-sm leading-relaxed text-[#f6dfd4]/82 sm:text-base">
-            Documento informativo sobre el uso del sitio, coordinacion de servicios domiciliarios y condiciones generales de atencion.
+            Documento informativo sobre el uso del sitio y las condiciones generales de los servicios esteticos ofrecidos por Avelie Centro Estetico.
             Ultima actualizacion: abril de 2026.
           </p>
 
